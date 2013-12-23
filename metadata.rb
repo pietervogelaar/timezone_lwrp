@@ -1,5 +1,5 @@
 name             "timezone"
-maintainer       "Kirill Kouznetso"
+maintainer       "Kirill Kouznetsov"
 maintainer_email "agon.smith@gmail.com"
 license          "Apache 2.0"
 description      "Configure the system timezone on Debian or Ubuntu."
