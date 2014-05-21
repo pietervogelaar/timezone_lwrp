@@ -23,7 +23,14 @@
 action :set do
   package "tzdata"
 
+  bash 'dpkg-reconfigure tzdata' do
+    user 'root'
+    code "/usr/sbin/dpkg-reconfigure -f noninteractive tzdata"
+    action :nothing
+  end
+
   tz_f = file "/etc/timezone" do
+    action :nothing
     owner "root"
     group "root"
     mode 0644
@@ -31,15 +38,9 @@ action :set do
     content "#{new_resource.timezone}\n"
   end
 
-  bash 'dpkg-reconfigure tzdata' do
-    user 'root'
-    code "/usr/sbin/dpkg-reconfigure -f noninteractive tzdata"
-    action :nothing
-  end
+  tz_f.run_action(:create)
 
-  if tz_f.updated_by_last_action?
-    new_resource.updated_by_last_action(true)
-  end
+  new_resource.updated_by_last_action(tz_f.updated_by_last_action?)
 end
 
 # vim: ts=2 sts=2 sw=2 sta et
