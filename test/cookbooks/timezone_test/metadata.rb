@@ -6,4 +6,4 @@ description      'Test cookbook for timezone cookbook'
 long_description 'Test cookbook for timezone cookbook'
 version          '0.1.0'
 
-depends 'timezone'
+depends 'timezone_lwrp'

@@ -1,5 +1,9 @@
 # cookbook `timezone` CHANGELOG
 
+## 0.1.3 (07-04-2015)
+
+* forked and renamed for uploading into Supermarket.
+
 ## 0.1.2 (06-04-2015)
 
 * Actual inter-resource notifications fix.

@@ -20,8 +20,9 @@
 # limitations under the License.
 #
 
+provides :timezone
+resource_name :timezone
 actions :set
-
 default_action :set
 
 attribute :timezone, kind_of: String, name_attribute: true
