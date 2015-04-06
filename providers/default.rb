@@ -21,19 +21,19 @@
 #
 
 action :set do
-  package "tzdata"
+  package 'tzdata'
 
   bash 'dpkg-reconfigure tzdata' do
     user 'root'
-    code "/usr/sbin/dpkg-reconfigure -f noninteractive tzdata"
+    code '/usr/sbin/dpkg-reconfigure -f noninteractive tzdata'
     action :nothing
   end
 
-  tz_f = file "/etc/timezone" do
+  tz_f = file '/etc/timezone' do
     action :nothing
-    owner "root"
-    group "root"
-    mode 0644
+    owner 'root'
+    group 'root'
+    mode '0644'
     notifies :run, 'bash[dpkg-reconfigure tzdata]'
     content "#{new_resource.timezone}\n"
   end

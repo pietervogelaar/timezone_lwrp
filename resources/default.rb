@@ -24,6 +24,6 @@ actions :set
 
 default_action :set
 
-attribute :timezone, :kind_of => String, :name_attribute => true
+attribute :timezone, kind_of: String, name_attribute: true
 
 # vim: ts=2 sts=2 sw=2 sta et
