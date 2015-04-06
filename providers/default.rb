@@ -5,7 +5,7 @@
 #
 # Author:: Kirill Kouznetsov <agon.smith@gmail.com>
 #
-# Copyright 2013, Kirill Kouznetsov.
+# Copyright 2015, Kirill Kouznetsov.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,22 +23,23 @@
 action :set do
   package 'tzdata'
 
-  bash 'dpkg-reconfigure tzdata' do
-    user 'root'
-    code '/usr/sbin/dpkg-reconfigure -f noninteractive tzdata'
-    action :nothing
-  end
-
   tz_f = file '/etc/timezone' do
     action :nothing
     owner 'root'
     group 'root'
     mode '0644'
-    notifies :run, 'bash[dpkg-reconfigure tzdata]'
     content "#{new_resource.timezone}\n"
   end
 
   tz_f.run_action(:create)
+
+  reconfigure = bash 'dpkg-reconfigure tzdata' do
+    user 'root'
+    code '/usr/sbin/dpkg-reconfigure -f noninteractive tzdata'
+    action :nothing
+  end
+
+  reconfigure.run_action(:run) if tz_f.updated_by_last_action?
 
   new_resource.updated_by_last_action(tz_f.updated_by_last_action?)
 end
