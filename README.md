@@ -6,16 +6,19 @@ Provides LWRP to manage timezone.
 
 ## Platform
 
-Only tested on Debian 6.
+Tested on:
+- Ubuntu 12.04
+- Ubuntu 14.04
+- Debian 7.8
 
 ## Chef version
 
-Chef version >= `0.10.10` has to be used.
+Chef version >= `11.16.2` has to be used.
 
 # Usage
 
 This cookbook has been designed to provide **LWRP** for your own infrastructure recipes.
-Load this cookbook by your chef-client either by adding the line `depends "timezone"` to your infrastructure cookbook's metadata.rb file or by adding `recipe[timezone]` to your run\_list before the cookbook where you plan to use it. 
+Load this cookbook by your chef-client either by adding the line `depends "timezone"` to your infrastructure cookbook's metadata.rb file or by adding `recipe[timezone]` to your run\_list before the cookbook where you plan to use it.
 
 ## LWRP
 
@@ -24,13 +27,18 @@ Load this cookbook by your chef-client either by adding the line `depends "timez
 This resource sets the timezone by editing `/etc/timezone` file and running `dpgk-reconfigure` afterwards.
 
 ```ruby
-timezone "Europe/Moscow"
+timezone 'Europe/Moscow'
 ```
+
+## Sponsor
+
+[![Sponsored by Evil Martians](https://evilmartians.com/badges/sponsored-by-evil-martians@2x.png)](https://evilmartians.com)
 
 # License and Author
 
 Author:: Kirill Kouznetsov (<agon.smith@gmail.com>)
-Copyright:: 2013, Kirill Kouznetsov.
+
+Copyright:: 2015, Kirill Kouznetsov.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
