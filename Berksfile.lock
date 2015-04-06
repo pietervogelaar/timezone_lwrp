@@ -1,0 +1,11 @@
+DEPENDENCIES
+  timezone
+    path: .
+    metadata: true
+  timezone_test
+    path: test/cookbooks/timezone_test
+
+GRAPH
+  timezone (0.1.2)
+  timezone_test (0.1.0)
+    timezone (>= 0.0.0)
