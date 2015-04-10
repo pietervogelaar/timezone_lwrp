@@ -1,5 +1,11 @@
 # cookbook `timezone` CHANGELOG
 
+## 0.1.4 (10-04-2015)
+
+* support for CentOS, Fedora, RHEL
+* you can use this cookbook as an attribute-based now, if you want
+* a bit of chefspec
+
 ## 0.1.3 (07-04-2015)
 
 * forked and renamed for uploading into Supermarket.
