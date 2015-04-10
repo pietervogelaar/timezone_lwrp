@@ -1,5 +1,9 @@
 # cookbook `timezone` CHANGELOG
 
+## 0.1.5 (11-04-2015)
+
+* Small README file fix.
+
 ## 0.1.4 (10-04-2015)
 
 * support for CentOS, Fedora, RHEL
