@@ -28,9 +28,9 @@ Chef version >= `11.16.2` has to be used.
 # Usage
 
 This cookbook has been designed to provide **LWRP** for your own infrastructure recipes.
-Load this cookbook by your chef-client either by adding the line `depends "timezone"` to your infrastructure cookbook's metadata.rb file.
+Load this cookbook by your chef-client either by adding the line `depends 'timezone_lwrp'` to your infrastructure cookbook's metadata.rb file.
 
-But if you want 'good old' attribute-based configuration you may just add `recipe[timezone]` to your run\_list and set `['tz']` attribute to a desired timezone.
+But if you want 'good old' attribute-based configuration you may just add `recipe[timezone_lwrp]` to your run\_list and set `['tz']` attribute to a desired timezone.
 
 ## LWRP
 
