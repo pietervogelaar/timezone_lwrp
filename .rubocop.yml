@@ -1,0 +1,7 @@
+Style/AccessorMethodName:
+  Exclude:
+    - libraries/matchers.rb
+
+AllCops:
+  Exclude:
+    - '.kitchen/**'
