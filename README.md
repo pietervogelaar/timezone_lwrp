@@ -37,7 +37,7 @@ But if you want 'good old' attribute-based configuration you may just add `recip
 
 ### timezone
 
-This resource sets the timezone by editing `/etc/timezone` file and running `dpgk-reconfigure` afterwards.
+This resource sets the timezone by editing `/etc/timezone` file and running `dpkg-reconfigure` afterwards.
 
 ```ruby
 timezone 'Europe/Moscow'

@@ -1,5 +1,9 @@
 # cookbook `timezone` CHANGELOG
 
+## 0.1.6 (13-04-2015)
+
+* Travis-CI integration.
+
 ## 0.1.5 (11-04-2015)
 
 * Small README file fix.
