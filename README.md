@@ -1,4 +1,5 @@
 [![Chef cookbook](https://img.shields.io/cookbook/v/timezone_lwrp.svg)](https://github.com/dragonsmith/timezone_lwrp)
+[![Build Status](https://travis-ci.org/dragonsmith/timezone_lwrp.svg?branch=master)](https://travis-ci.org/dragonsmith/timezone_lwrp)
 
 # Description
 
