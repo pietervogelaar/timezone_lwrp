@@ -1,3 +1,4 @@
 *.swp
 metadata.json
 .kitchen
+.travis/secrets.tar.gz
