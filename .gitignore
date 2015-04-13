@@ -2,3 +2,5 @@
 metadata.json
 .kitchen
 .travis/secrets.tar.gz
+.travis/*.pem
+.travis/id_rsa
