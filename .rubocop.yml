@@ -5,3 +5,4 @@ Style/AccessorMethodName:
 AllCops:
   Exclude:
     - '.kitchen/**'
+    - 'vendor/bundle/**'
