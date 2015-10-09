@@ -1,5 +1,9 @@
 # cookbook `timezone` CHANGELOG
 
+## 0.1.7 (09-10-2015)
+
+* Compatibility with Chef 12.4.0 and older.
+
 ## 0.1.6 (13-04-2015)
 
 * Travis-CI integration.
